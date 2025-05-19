@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<body>
+{% include "include/header.html" %}
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./categories.html">Categories</a>
+                        <span>Romance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Anime Section Begin -->
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="anime__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="anime__details__pic set-bg" data-setbg="{{anime.image.url}}">
+                            <div class="view"><i class="fa fa-eye"></i>{{anime.views}}</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="anime__details__text">
+                            <div class="anime__details__title">
+                                <h3>{{anime.title}}</h3>
+                                <span>{{anime.transcription}}</span>
+                            </div>
+                            <p>{{anime.short_description}}</p>
+                            <div class="anime__details__btn">
+                                <a href="#" class="watch-btn"><span>Смотреть</span> <i
+                                    class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-8">
+                        <div class="anime__details__review">
+                            <div class="section-title">
+                                <h5>Reviews</h5>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-1.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
+                                    "demons" LOL</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-2.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                                    <p>Finally it came out ages ago</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-3.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                                    <p>Where is the episode 15 ? Slow update! Tch</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-4.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
+                                    "demons" LOL</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-5.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                                    <p>Finally it came out ages ago</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="{% static 'img/anime/review-6.jpg' %}" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                                    <p>Where is the episode 15 ? Slow update! Tch</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anime__details__form">
+                            <div class="section-title">
+                                <h5>Your Comment</h5>
+                            </div>
+                            <form action="#">
+                                <textarea placeholder="Your Comment"></textarea>
+                                <button type="submit"><i class="fa fa-location-arrow"></i> Review</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Anime Section End -->
+
+{% include "include/footer.html" %}
+
+{% endblock %}
+
+
+        <!-- Js Plugins -->
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/player.js' %}"></script>
+        <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'js/mixitup.min.js' %}"></script>
+        <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+    </body>
+
+    </html>
